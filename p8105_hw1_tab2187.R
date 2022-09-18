@@ -1,6 +1,7 @@
 install.packages("palmerpenguins")
 data("penguins", package = "palmerpenguins")
 p8105_hw1_tab2187 = read.table("penguins", header = TRUE)
+###########Problem 1##########################
 #to look at the first 10 or 20 rows of data
 head(penguins, 20)
 #Number of Rows
@@ -26,7 +27,7 @@ summary(billlength, na.rm= TRUE)
 #look for summary with each variable in data set
 summary(penguins, na.rm= TRUE)
 
-###Simple Scatterplot
+###Simple Scatterplot########
 
 #make a scatterplot using the data in flipperlength and billlength
 # Simple Scatterplot
@@ -35,3 +36,14 @@ plot(flipperlength, billlength, main="Scatterplot",
 ##Adding Color to Plot
 library(ggplot2)
 ggplot(penguins,aes(x=billlength,y=flipperlength))+ geom_point(color="blue")
+
+
+##############Problem 2############################
+#Creating a Normal Distribution
+library(tibble)
+example_df = tibble(
+  vec_numeric = 5:8,
+  vec_char = c("My", "name", "is", "Jeff"),
+  vec_logical = c(TRUE, TRUE, TRUE, FALSE),
+  vec_factor = factor(c("male", "male", "female", "female"))
+)
