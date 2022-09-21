@@ -26,6 +26,9 @@ fivenum(billlength, na.rm = TRUE)
 summary(billlength, na.rm= TRUE)
 #look for summary with each variable in data set
 summary(penguins, na.rm= TRUE)
+# the longer the bill length the longer the flipper length
+
+
 
 ###Simple Scatterplot########
 
@@ -36,14 +39,17 @@ plot(flipperlength, billlength, main="Scatterplot",
 ##Adding Color to Plot
 library(ggplot2)
 ggplot(penguins,aes(x=billlength,y=flipperlength))+ geom_point(color="blue")
-
+#To save as png
+ggsave("penguins.png")
 
 ##############Problem 2############################
 #Creating a Normal Distribution
 library(tibble)
 example_df = tibble(
-  vec_numeric = 5:8,
-  vec_char = c("My", "name", "is", "Jeff"),
-  vec_logical = c(TRUE, TRUE, TRUE, FALSE),
-  vec_factor = factor(c("male", "male", "female", "female"))
+  random_sample = rnorm(10),
+  vec_logic = random_sample > 0,
+  vec_char = c("a", "e", "i","o", "u", "ea", "oi", "au", "uai", "iou"),
+  vec_factor = factor(c("low", "low", "low", "low", "low", "medium", "medium", "medium", "high", "high")),
 )
+######Continuation of Problem 2############
+library(tidyverse)
