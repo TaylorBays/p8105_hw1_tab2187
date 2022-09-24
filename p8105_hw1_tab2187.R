@@ -1,3 +1,12 @@
+##################################################################
+# Sept 24, 2022
+# Taylor Bays
+#
+# Homework 1
+##################################################################
+
+
+
 install.packages("palmerpenguins")
 data("penguins", package = "palmerpenguins")
 p8105_hw1_tab2187 = read.table("penguins", header = TRUE)
