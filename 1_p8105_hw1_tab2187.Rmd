@@ -86,7 +86,7 @@ mean(example_df$vec_char)
 as.numeric(example_df$vec_factor)
 #Given number values for the numeric logic variables. the numbers consist of zeroes and ones. represent when the number value in the random sample is greater than 0.
 as.numeric(example_df$vec_logic)
-#Given NA values for the numeric character values. These values could not be reasonably given numbers so the output is NA
+#Given NA values for the numeric character values. These values could not be reasonably given numbers so the output is NA. This explains why I did not get a mean.
 as.numeric(example_df$vec_char)
 
 
