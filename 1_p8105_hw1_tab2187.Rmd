@@ -10,9 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```{r}
-knitr::opts_chunk$set(echo = TRUE)
-##################################################################
-##Problem 0.1 and 0.2#####
+##Problem 0.1 and 0.2######
 # Sept 24, 2022
 # Taylor Bays
 #
@@ -88,16 +86,6 @@ as.numeric(example_df$vec_factor)
 as.numeric(example_df$vec_logic)
 #Given NA values for the numeric character values. These values could not be reasonably given numbers so the output is NA. This explains why I did not get a mean.
 as.numeric(example_df$vec_char)
-
-
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
