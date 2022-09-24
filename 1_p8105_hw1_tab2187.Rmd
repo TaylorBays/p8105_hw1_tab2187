@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```{r}
+knitr::opts_chunk$set(echo = TRUE)
 ##################################################################
 ##Problem 0.1 and 0.2#####
 # Sept 24, 2022
@@ -74,7 +75,20 @@ example_df = tibble(
   vec_factor = factor(c("low", "low", "low", "low", "low", "medium", "medium", "medium", "high", "high")),
 )
 ######Continuation of Problem 2############
-library(tidyverse)
+#value is not numeric so it cannot give a mean
+mean(example_df$vec_factor)
+#value is numeric so it can give a mean
+mean(example_df$vec_logic)
+#value is not numeric so it cannot give a mean
+mean(example_df$vec_char)
+
+#Given number values for the numeric factor variables. the ordering is alphabetically low is 2, medium is 3 and high is 1.
+as.numeric(example_df$vec_factor)
+#Given number values for the numeric logic variables. the numbers consist of zeroes and ones. represent when the number value in the random sample is greater than 0.
+as.numeric(example_df$vec_logic)
+#Given NA values for the numeric character values. These values could not be reasonably given numbers so the output is NA
+as.numeric(example_df$vec_char)
+
 
 ```
 
